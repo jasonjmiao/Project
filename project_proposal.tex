@@ -1,0 +1,48 @@
+\documentclass[letterpaper,11pt]{texMemo} % Set the paper size (letterpaper, a4paper, etc) and font size (10pt, 11pt or 12pt)
+
+%\usepackage{parskip} % Adds spacing between paragraphs
+\setlength{\parindent}{15pt} % Indent paragraphs
+\usepackage[font=small,skip=2pt]{caption}
+\usepackage{float}
+\usepackage{chngcntr}
+\usepackage{gensymb}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+%----------------------------------------------------------------------------------------
+%	MEMO INFORMATION
+%----------------------------------------------------------------------------------------
+
+\memoto{Madeleine Udell, ORIE 4741 Staff} % Recipient(s)
+
+\memofrom{Alan Lee (aml326), Jason Miao (jjm467)} % Sender(s)
+
+\memosubject{Data Analysis Proposal: Predicting Airline Satisfaction} % Memo subject
+
+\memodate{Monday, September 30, 2019} % Date, set to \today for automatically printing todays date
+
+\logo{\includegraphics[width=0.2\textwidth]{Cornell.png}} % Institution logo at the top right of the memo, comment out this line for no logo
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+
+\maketitle % Print the memo header information
+\section{Executive Summary}
+The aviation industry is intrinsic to the functioning of the global economy. Yet, in recent times airline profit margins have become increasingly slim. With that, more and more airlines are failing. 2019 alone has already seen high profile bankruptcies of key airlines such as Thomas Cook and WOW Air. At the same time, it has become increasingly difficult for new airlines to enter the market. This has major implications on the options for customers as well as the aviation industry as a whole.\\
+\\
+\noindent In such a time, there is little margin for error within the aviation industry. As such, we seek to determine: \textit{Can we predict airline customer satisfaction? And, if presented with several options for a route, which airline would a customer prefer to take and why?} We plan to do so by performing a data analysis on a data set of all customer reviews from Skytrax, an airline airport review and ranking site. Ultimately, an airline is driven by its customer base. Thus, through this data analysis, we hope to improve the airline industry by learning both what is working and what is not.
+
+\section{Dataset}
+The dataset we selected is accessible here:\\ \url{https://github.com/quankiquanki/skytrax-reviews-dataset}.\\
+\\
+\noindent This data set is a web scraping of all customer reviews on the Skytrax site as of August 2nd, 2015. We plan to focus on efforts on the airline reviews which account for 41,396 entries with 20 features. Features include the airline name, review text, overall rating, seat comfort rating, cabin staff rating, food and beverages rating, etc.\\
+\\
+\noindent Critically, the data set includes a feature for whether or not the reviewer recommends the airline. This is invaluable to our efforts in predicting customer satisfaction. Furthermore, though we have identified massive amounts of missing data entries for features such as aircraft and route, we have noticed that the majority of reviews mention this information in the text body. Since aircraft model types and airport codes are rather standardized, we are hopeful to pull this important information from the customer reviews themselves.
+
+\end{document}
